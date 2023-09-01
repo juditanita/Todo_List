@@ -37,7 +37,7 @@ function App() {
       setName("");
       setIsEdited(false);
       setEditedId(null);
-      showAlert(true, "success", "Item modified");
+      showAlert(true, "success", `${name} added to the list`);
     } else {
       //item is added to the list and add some alert to tell the user that it is happening
       const newItem = {
@@ -63,7 +63,7 @@ function App() {
     console.log("button clicked");
     const newList = list.filter((item) => item.id !== id);
     setList(newList);
-    showAlert(true, "danger", "item removed");
+    showAlert(true, "danger", "removed");
   };
 
   const editItem = (id) => {
@@ -71,8 +71,8 @@ function App() {
     setIsEdited(true);
     setEditedId(id);
     const newName = specificItem.title;
+
     setName((prevName) => newName);
-    showAlert(true, "success", `${newName} added to the list`);
   };
 
   useEffect(() => {
@@ -88,7 +88,7 @@ function App() {
         <div className="form-control">
           <input
             type="text"
-            className="grocery"
+            className={isEdited ? "edited-grocery" : "grocery"}
             value={name}
             onChange={(event) => setName((prev) => event.target.value)}
             placeholder="e.g. grocery"
