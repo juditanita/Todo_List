@@ -92,6 +92,12 @@ h3 {
 h4 {
   font-size: 0.875rem;
 }
+.stop-icon {
+  color: var(--clr-red-dark);
+  margin-right: 10px;
+  font-size: 3rem;
+}
+
 p {
   margin-bottom: 1.25rem;
   color: var(--clr-grey-5);

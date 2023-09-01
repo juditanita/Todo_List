@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import List from "./List";
 import Alert from "./Alert";
+import { BsFillSignStopFill } from "react-icons/bs";
 
 function App() {
   const [name, setName] = useState("");
@@ -83,14 +84,18 @@ function App() {
     <section className="section-center">
       <form onSubmit={handleSubmit} className="grocery-form">
         {alert.show && <Alert {...alert} removeAlert={showAlert} list={list} />}
-        <h3>Things to do</h3>
+        <h3>
+          <BsFillSignStopFill className="stop-icon" />
+          not to do
+        </h3>
+
         <div className="form-control">
           <input
             type="text"
             className="grocery"
             value={name}
             onChange={(event) => setName((prev) => event.target.value)}
-            placeholder="e.g. buy eggs"
+            placeholder="e.g. lot of sugar"
           />
           <button type="submit" className="submit-btn">
             {isEdited ? "edit" : "submit"}
