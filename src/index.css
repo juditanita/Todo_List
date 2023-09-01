@@ -196,7 +196,7 @@ Grocery List
   display: grid;
   align-items: center;
   text-align: center;
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   border-radius: 0.25rem;
   letter-spacing: var(--spacing);
   text-transform: capitalize;
@@ -319,7 +319,7 @@ Grocery List
   border-color: transparent;
   color: var(--clr-red-light);
   margin: 0 auto;
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   letter-spacing: var(--spacing);
   cursor: pointer;
   transition: var(--transition);
